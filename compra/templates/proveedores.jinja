@@ -1,0 +1,14 @@
+{% extends 'contenedor.jinja' %}
+
+{% block contenido %}
+
+    <h1>PROVEEDORES</h1>
+    <table>
+        <tr><th>Apellido</th><th>Nombre</th><th>Documento</th></tr>
+        
+        {% for proveedor in proveedores %}
+            <tr><td>{{ proveedor.apellido }}</td><td>{{ proveedor.nombre }}</td><td>{{ proveedor.dni }}</td></tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

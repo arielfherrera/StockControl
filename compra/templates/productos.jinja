@@ -1,0 +1,18 @@
+{% extends 'contenedor.jinja' %}
+
+{% block contenido %}
+
+    <h1>PRODUCTOS</h1>
+    <table>
+        <tr><th>Nombre</th><th>Precio</th><th>Stock</th></tr>
+        
+        {% for producto in productos %}
+            <tr>
+                <td>{{ producto.nombre }}</td>
+                <td>{{ producto.precio }}</td>
+                <td>{{ producto.stock_actual }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}
